@@ -39,11 +39,25 @@ public class GameManager : MyMonoBehaviour
 		}
 	}
 
+	//private static readonly string followIconCanvas = "FollowIconCanvas";
+	void Start()
+	{
+
+	}
+
 	void Update()
 	{
 		if(Input.GetKeyDown(KeyCode.T))
 		{
 			Application.CaptureScreenshot("ScreenShot.png");
 		}
+
+		// プレイヤーの入力情報を更新
+		PlayerInput.instance.Update(Time.deltaTime);
+	}
+
+	void FixedUpdate()
+	{
+		StartCoroutine(PlayerInput.instance.LateFixedUpdate());
 	}
 }

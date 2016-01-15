@@ -12,19 +12,19 @@ public class InputName
 	public const string @Vertical = "Vertical";
 
 	/// <summary>
-	/// return "Fire1"
+	/// return "Attack"
  	/// </summary>
-	public const string @Fire1 = "Fire1";
+	public const string @Attack = "Attack";
 
 	/// <summary>
-	/// return "Fire2"
+	/// return "Barrier"
  	/// </summary>
-	public const string @Fire2 = "Fire2";
+	public const string @Barrier = "Barrier";
 
 	/// <summary>
-	/// return "Fire3"
+	/// return "ItemGet"
  	/// </summary>
-	public const string @Fire3 = "Fire3";
+	public const string @ItemGet = "ItemGet";
 
 	/// <summary>
 	/// return "Jump"
@@ -67,26 +67,40 @@ public class InputName
 	public const string @CameraY = "CameraY";
 
 	/// <summary>
+	/// return "CameraToFront"
+ 	/// </summary>
+	public const string @CameraToFront = "CameraToFront";
+
+	/// <summary>
+	/// return "LockOn"
+ 	/// </summary>
+	public const string @LockOn = "LockOn";
+
+	/// <summary>
 	/// <para>0. "Horizontal"</para>
 	/// <para>1. "Vertical"</para>
-	/// <para>2. "Fire1"</para>
-	/// <para>3. "Fire2"</para>
-	/// <para>4. "Fire3"</para>
+	/// <para>2. "Attack"</para>
+	/// <para>3. "Barrier"</para>
+	/// <para>4. "ItemGet"</para>
 	/// <para>5. "Jump"</para>
 	/// <para>6. "Mouse X"</para>
 	/// <para>7. "Mouse Y"</para>
 	/// <para>8. "Mouse ScrollWheel"</para>
 	/// <para>9. "Horizontal"</para>
 	/// <para>10. "Vertical"</para>
-	/// <para>11. "Fire1"</para>
-	/// <para>12. "Fire2"</para>
-	/// <para>13. "Fire3"</para>
+	/// <para>11. "Attack"</para>
+	/// <para>12. "Barrier"</para>
+	/// <para>13. "ItemGet"</para>
 	/// <para>14. "Jump"</para>
 	/// <para>15. "Submit"</para>
 	/// <para>16. "Submit"</para>
 	/// <para>17. "Cancel"</para>
 	/// <para>18. "CameraX"</para>
 	/// <para>19. "CameraY"</para>
+	/// <para>20. "CameraToFront"</para>
+	/// <para>21. "CameraToFront"</para>
+	/// <para>22. "LockOn"</para>
+	/// <para>23. "LockOn"</para>
 	/// </summary>
-	public static readonly string[] names = new string[]{"Horizontal","Vertical","Fire1","Fire2","Fire3","Jump","Mouse X","Mouse Y","Mouse ScrollWheel","Horizontal","Vertical","Fire1","Fire2","Fire3","Jump","Submit","Submit","Cancel","CameraX","CameraY"};
+	public static readonly string[] names = new string[]{"Horizontal","Vertical","Attack","Barrier","ItemGet","Jump","Mouse X","Mouse Y","Mouse ScrollWheel","Horizontal","Vertical","Attack","Barrier","ItemGet","Jump","Submit","Submit","Cancel","CameraX","CameraY","CameraToFront","CameraToFront","LockOn","LockOn"};
 }

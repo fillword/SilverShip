@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using Uxtuno;
+using System.Diagnostics;
 
 namespace Uxtuno
 {
@@ -8,10 +8,27 @@ namespace Uxtuno
 	/// </summary>
 	public class MyMonoBehaviour : MonoBehaviour
 	{
-		private Renderer _renderer; // rendererプロパティの実態
+		private Transform _transform; // transformプロパティの実体
 
 		/// <summary>
-		/// 自分自身のRendererを取得する
+		/// 自分自身のTransformを取得する(キャッシュあり)
+		/// </summary>
+		public new Transform transform
+		{
+			get
+			{
+				if (_transform == null)
+				{
+					_transform = base.transform;
+				}
+				return _transform;
+			}
+		}
+
+		private Renderer _renderer; // rendererプロパティの実体
+
+		/// <summary>
+		/// 自分自身のRendererを取得する(キャッシュあり)
 		/// </summary>
 		public new virtual Renderer renderer
 		{
@@ -26,10 +43,10 @@ namespace Uxtuno
 			}
 		}
 
-		private Collider _collider; // colliderプロパティの実態
+		private Collider _collider; // colliderプロパティの実体
 
 		/// <summary>
-		/// 自分自身のcollideを取得する
+		/// 自分自身のcollideを取得する(キャッシュあり)
 		/// </summary>
 		public new virtual Collider collider
 		{
@@ -44,10 +61,10 @@ namespace Uxtuno
 			}
 		}
 
-		private Rigidbody _rigidbody;   // rigidbodyプロパティの実態
+		private Rigidbody _rigidbody;   // rigidbodyプロパティの実体
 
 		/// <summary>
-		/// 自分自身のrigidbodyを取得する
+		/// 自分自身のrigidbodyを取得する(キャッシュあり)
 		/// </summary>
 		public new Rigidbody rigidbody
 		{

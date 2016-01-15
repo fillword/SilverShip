@@ -9,7 +9,7 @@ namespace Kuvo
 	public class TitleSceneController : MonoBehaviour
 	{
 		[SerializeField]
-		private GameObject flashingGameObject;          // 点滅対象のゲームオブジェクト
+		private GameObject flashingGameObject = null;          // 点滅対象のゲームオブジェクト
 		[SerializeField]
 		private string nextSceneName = string.Empty;    // 遷移先のシーン名
 		private TitleSoundCollector soundCollector { get; set; }
@@ -17,7 +17,7 @@ namespace Kuvo
 		private void Awake()
 		{
 			soundCollector = gameObject.AddComponent<TitleSoundCollector>();
-			SoundPlayerSingleton.Instance.PlayBGM(soundCollector[TitleSoundCollector.SoundName.BGM], true, SoundPlayerSingleton.FadeMode.FadeIn, 10.0f);
+			SoundPlayerSingleton.instance.PlayBGM(soundCollector[TitleSoundCollector.SoundName.BGM], true, SoundPlayerSingleton.FadeMode.FadeIn, 10.0f);
 		}
 
 		private IEnumerator Start()
@@ -46,7 +46,7 @@ namespace Kuvo
 			// いずれかのキーが入力されたらシーンを切り替える
 			if (Input.anyKeyDown)
 			{
-				SceneChangerSingleton.Instance.FadeChange(nextSceneName);
+				SceneChangerSingleton.instance.FadeChange(nextSceneName);
 			}
 		}
 	}

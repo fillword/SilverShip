@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - CameraController
+  - AttackArea
+  - Fire
+  - LockOnPoint
+  - Scaffold
   layers:
   - Default
   - TransparentFX
@@ -40,6 +44,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Icon
+    uniqueID: 3283095557
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

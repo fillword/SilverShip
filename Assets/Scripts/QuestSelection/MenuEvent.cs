@@ -61,7 +61,7 @@ namespace Kuvo
 		/// <param name="sceneName"> 遷移先のシーン名</param>
 		public void OnSceneChange(string sceneName)
 		{
-			SceneChangerSingleton.Instance.FadeChange(sceneName);
+			SceneChangerSingleton.instance.FadeChange(sceneName);
 		}
 
 		/// <summary>
@@ -148,6 +148,20 @@ namespace Kuvo
 
 			oldSelectedGameObject = EventSystem.current.currentSelectedGameObject;
 			EventSystem.current.SetSelectedGameObject(nextGameObject);
+
+			// ↓これでマウス位置のあたり判定が取れる（らしい）
+			//PointerEventData ped = new PointerEventData(EventSystem.current);
+			//ped.position = Input.mousePosition;
+			//List<RaycastResult> results = new List<RaycastResult>();
+			//EventSystem.current.RaycastAll(ped, results);
+			//foreach(RaycastResult rr in results)
+			//{
+			//	if(rr.gameObject != null)
+			//	{
+			//		Debug.Log(rr.gameObject.name);
+			//	}
+
+			//}
 		}
 
 		public void OnSEPlay(Object obj)
@@ -160,7 +174,7 @@ namespace Kuvo
 				return;
 			}
 
-			SoundPlayerSingleton.Instance.PlaySE(gameObject, audioClip);
+			SoundPlayerSingleton.instance.PlaySE(gameObject, audioClip);
 		}
 	}
 }

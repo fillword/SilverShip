@@ -6,6 +6,7 @@
 Sounds/
 SilverShip/
 
+ProjectSettings/
 *.exe
 *.csproj
 *.unityproj
@@ -13,3 +14,5 @@ SilverShip/
 *.suo
 *.user
 *.userprefs
+TagManager.asset
+InputManager.asset
