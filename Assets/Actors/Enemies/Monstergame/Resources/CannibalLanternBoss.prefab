@@ -453,7 +453,7 @@ GameObject:
   - 114: {fileID: 11480082}
   - 114: {fileID: 11429456}
   m_Layer: 0
-  m_Name: CannibalLantern
+  m_Name: CannibalLanternBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1000,8 +1000,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.01999998}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 488272}
   - {fileID: 495726}
@@ -1194,12 +1194,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ae1b1cacae2c348bd68b912bee05aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  score: 100
-  viewAngle: 120
+  speed: 5
+  score: 2500
+  viewAngle: 150
   viewRange: 10
   muzzle: {fileID: 490490}
-  bulletPrafab: {fileID: 172264, guid: 50cc16a0b3bb7084ea8e729b5a113b35, type: 2}
+  bulletPrafab: {fileID: 172264, guid: 4b5974941cf6be44cb3a4eb76c56d787, type: 2}
 --- !u!135 &13535592
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1262,7 +1262,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: attackStateRange
@@ -1275,18 +1275,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: bulletPrafab
       value: 
-      objectReference: {fileID: 172264, guid: 50cc16a0b3bb7084ea8e729b5a113b35, type: 2}
+      objectReference: {fileID: 172264, guid: 4b5974941cf6be44cb3a4eb76c56d787, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: score
-      value: 100
+      value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: viewAngle
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.z
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
