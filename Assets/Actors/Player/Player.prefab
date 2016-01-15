@@ -7609,7 +7609,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: .200000003
-  m_SlopeLimit: 45
+  m_SlopeLimit: 1
   m_StepOffset: .400000006
   m_SkinWidth: .0799999982
   m_MinMoveDistance: .00100000005
@@ -7620,7 +7620,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_SlopeLimit
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 101344}
